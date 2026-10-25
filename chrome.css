@@ -1,0 +1,62 @@
+/* Shared portfolio navigation on the landing page and every case study. */
+header.site-header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1800px;
+  height: 80px;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 0 32px;
+  border: 0;
+  color: #303131;
+  font: 14px/1.5 Arial, Helvetica, sans-serif;
+}
+.page-shell > header.site-header { padding-inline: 0; }
+header.site-header a.wordmark {
+  color: #303131;
+  font: 500 17px/1.5 Arial, Helvetica, sans-serif;
+  letter-spacing: -.45px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+header.site-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  gap: 0;
+  font: 14px/1.5 Arial, Helvetica, sans-serif;
+}
+header.site-header nav a {
+  display: inline-block;
+  padding: 10px 0;
+  color: #737575;
+  text-decoration: none;
+  white-space: nowrap;
+}
+header.site-header .resume-link span { margin-left: 4px; }
+header.site-header a:hover { color: #416756; }
+header.site-header a:focus-visible {
+  outline: 2px solid #416756;
+  outline-offset: 6px;
+  border-radius: 2px;
+}
+body.case-study-page { padding-bottom: 64px; }
+@media (min-width: 1500px) {
+  header.site-header { height: 88px; padding-inline: 40px; }
+}
+@media (max-width: 1050px) {
+  header.site-header { padding-inline: 25px; }
+}
+@media (max-width: 700px) {
+  header.site-header { height: 72px; gap: 16px; padding-inline: 20px; }
+  header.site-header a.wordmark { font-size: 16px; }
+  header.site-header nav { font-size: 13px; }
+  body.case-study-page { padding-bottom: 48px; }
+}
+@media print { header.site-header { display: none; } }
